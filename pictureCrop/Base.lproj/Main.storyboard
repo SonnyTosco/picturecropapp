@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pictureCrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Cropper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-hr-NcY">
+                                <rect key="frame" x="131" y="15" width="338" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dO-Vz-qaW">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Khm-Xs-wOd"/>
+                                    <constraint firstAttribute="width" constant="320" id="W5l-dT-Guj"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-yR-wNB">
+                                <rect key="frame" x="220" y="484" width="161" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Crop and save"/>
+                                <connections>
+                                    <action selector="cropAndSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfj-7t-Zuv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="57Z-yR-wNB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7WJ-Uj-cbf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="57Z-yR-wNB" secondAttribute="bottom" constant="74" id="DDm-1y-S9v"/>
+                            <constraint firstItem="hpg-hr-NcY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gbl-52-4aR"/>
+                            <constraint firstItem="5dO-Vz-qaW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GeW-v7-vVt"/>
+                            <constraint firstItem="57Z-yR-wNB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ug9-fy-V89"/>
+                            <constraint firstItem="57Z-yR-wNB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wji-4g-zYH"/>
+                            <constraint firstItem="hpg-hr-NcY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="cMt-Oh-FhV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="57Z-yR-wNB" secondAttribute="trailing" constant="183" id="oWw-Wb-KRW"/>
+                            <constraint firstItem="5dO-Vz-qaW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjU-Wx-Zc0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ug9-fy-V89"/>
+                                <exclude reference="Wji-4g-zYH"/>
+                                <exclude reference="oWw-Wb-KRW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="5dO-Vz-qaW" id="byi-2W-Wyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="441"/>
+        </scene>
+    </scenes>
+</document>
